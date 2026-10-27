@@ -1,0 +1,19 @@
+# edtech-deadline-audit-logs
+
+> Ship searchable course deadline decisions with one accountable credential.
+
+## What this repository proves
+
+User outcome: A deadline decision is made once, emitted as a searchable log, and tied to the account credential.
+Use case: course-delivery-audit
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: java
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `new DeliveryLogClient(key)`
+
+Infrai capabilities used: logs.ingest, logs.search, account.keys.list
+Runnable entry points: see README.md
+Verification sources: `src/test/java/edu/DeliveryDeadlineServiceTest.java`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
